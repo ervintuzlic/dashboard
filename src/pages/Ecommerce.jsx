@@ -88,9 +88,8 @@ const Ecommerce = () => {
                     Expense
                   </p>
                 </div>
-
                 <div className="mt-5">
-                  <SparkLine currentColor="blue" id="line-sparkline" type="line" height="80px" width="250px" data={SparklineAreaData} color="blue" />
+                  <SparkLine currentColor="blue" id="line-sparkline" type="Line" height="80px" width="250px" data={SparklineAreaData} color="blue" />
                 </div>
               </div>
             </div>
