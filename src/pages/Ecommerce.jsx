@@ -96,6 +96,9 @@ const Ecommerce = () => {
                   <Button color="white" bgColor="blue" text="Download Report" borderRadius="10px"/>
                 </div>
               </div>
+              <div>
+                <Stacked width="320px" height="360px"/>
+              </div>
             </div>
         </div>
       </div>
