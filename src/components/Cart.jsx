@@ -8,7 +8,7 @@ import { cartData } from '../data/dummy';
 
 
 const Cart = () => {
-  const { handleClick} = useStateContext();
+  const { currentColor, handleClick} = useStateContext();
 
   return (
     <div className="bg-half-transparent w-screen fixed nav-item top-0 right-0">
@@ -39,9 +39,9 @@ const Cart = () => {
                     <div className="flex justify-inline">
                       <p className="font-bold text-lg mt-4">{item.price}</p>
                       <div className="flex ml-20 items-center border-1 border-r-0 border-color rounded">
-                      <p className="p-2 border-r-1 dark:border-gray-600 border-color text-red-600 "><AiOutlineMinus /></p>
+                      <p className="p-2 border-r-1 cursor-pointer dark:border-gray-600 border-color text-red-600 "><AiOutlineMinus /></p>
                       <p className="p-2 border-r-1 border-color dark:border-gray-600 text-green-600">0</p>
-                      <p className="p-2 border-r-1 border-color dark:border-gray-600 text-green-600"><AiOutlinePlus /></p>
+                      <p className="p-2 border-r-1 cursor-pointer border-color dark:border-gray-600 text-green-600"><AiOutlinePlus /></p>
                     </div>
                     </div>
 
@@ -50,6 +50,21 @@ const Cart = () => {
               </div>
             </div>
           ))}
+          <div className="flex leading-8 gap-60 min-w-full items-stretch">
+            <div className="m-2 pl-2 items-start">
+              <p>SubTotal</p>
+              <p>Total</p>
+            </div>
+            <div className="items-end font-bold text-lg m-2 pr-2">
+              <p>$890</p>
+              <p>$890</p>
+            </div>
+          </div>
+          <div>
+            <button type="button" className="text-xl text-white rounded-3xl p-3 m-4" style={{backgroundColor: currentColor, width: "370px"}}>
+              Place Order
+            </button>
+          </div>
       </div>
     </div>   
   )
